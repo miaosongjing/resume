@@ -351,7 +351,7 @@ html {
   padding-bottom: .06rem;
   font-weight: 600;
   color: #222;
-  text-shadow: .03rem .04rem .09rem #555 ;
+  text-shadow: .03rem .03rem .07rem #555 ;
   opacity: 0;
 }
 .page2 p span{
@@ -871,8 +871,8 @@ html {
   font-family: "楷体";
   color: black;
   text-shadow: .03rem .05rem .09rem #777;
-  -webkit-transform: scale(0.01);
-  transform: scale(0.01);
+  -webkit-transform: scale(0);
+  transform: scale(0);
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
   font-size: .3rem;

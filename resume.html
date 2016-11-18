@@ -106,7 +106,6 @@
     ~function () {
         document.documentElement.style.fontSize = (document.documentElement.clientWidth > 640 ? 100 : document.documentElement.clientWidth * 100 / 640) + 'px';
     }();
-    console.log(document.documentElement.style.fontSize);
     //Ⅱ MUSIC
     var musicRender=(function () {
         var $musicMenu=$('#musicMenu'),
@@ -124,7 +123,6 @@
         }
         return {
             init: function () {
-                //    1 music
                 //1.点击控制暂停和播放
                 $musicMenu.on('click', function () {
                     if($musicAudio[0].paused){
@@ -133,8 +131,10 @@
                         return;
                     }
                     $musicAudio[0].pause();
-                    $musicMenu.className='music';
-                },false);
+                    $musicMenu.removeClass('move');
+//                    console.log($musicMenu.prop('className'));//JQ中可以通过prop获取元素的类名
+                });
+
                 //2.音频播放--定时器,实现页面加载完成后,开始播放
                 timer=window.setTimeout(controlMusic,1000);
             }
